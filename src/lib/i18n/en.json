@@ -1,0 +1,209 @@
+{
+  "common": {
+    "nav": {
+      "dashboard": "Dashboard",
+      "myLink": "My link",
+      "inbox": "Inbox",
+      "logIn": "Log in",
+      "getStarted": "Get started"
+    },
+    "footer": {
+      "tagline": "Share a link and collect candid, anonymous messages from anyone.",
+      "builtBy": "Built by {name}.",
+      "project": "Project",
+      "github": "GitHub",
+      "createBox": "Create a box",
+      "dashboardLink": "Go to dashboard",
+      "signIn": "Sign in",
+      "connect": "Connect",
+      "copyright": "© {year} {name}. Open source under MIT."
+    },
+    "timeAgo": {
+      "justNow": "just now",
+      "minutesAgo": "{n} min ago",
+      "hoursAgo": "{n} hr ago",
+      "daysAgo": "{n} day ago",
+      "daysAgoPlural": "{n} days ago"
+    },
+    "language": "Language"
+  },
+  "home": {
+    "eyebrow": "Why constructive feedback matters",
+    "heroTitle1": "The truth people won't say",
+    "heroTitle2": "to your face — they'll send it here.",
+    "heroBody": "Constructive feedback is what moves personal and professional life forward — yet people hesitate to give honest or critical feedback, held back by fear of damaging a relationship or by plain awkwardness. So the truth we most need to hear often stays invisible.",
+    "heroBody2": "FeedbackBox removes that mental block by collecting opinions in a fully anonymous, secured way. The honest words people won't say in their own name reach your private inbox through a single shareable link.",
+    "goToDashboard": "Go to dashboard",
+    "createYourBox": "Create your box",
+    "logIn": "Log in",
+    "mockSendTo": "Send an anonymous message to",
+    "mockSample": "Your talks last week genuinely changed how our team ships. Thank you for being so generous with your time.",
+    "sendAnonymously": "Send anonymously",
+    "howTitle": "How it works",
+    "steps": [
+      {
+        "title": "Claim your box",
+        "body": "Sign up in under a minute and we generate a unique /u/you link for you."
+      },
+      {
+        "title": "Share the link",
+        "body": "Drop it in your bio, email signature, or on a slide. No app to install."
+      },
+      {
+        "title": "Read the truth",
+        "body": "Anonymous messages land in your private dashboard, timestamped and unread-marked."
+      }
+    ],
+    "featuresTitle": "Why FeedbackBox",
+    "features": [
+      {
+        "title": "Anonymous by design",
+        "body": "Senders never log in. Messages arrive with zero identity attached."
+      },
+      {
+        "title": "One shareable link",
+        "body": "A single public URL collects candid feedback from friends or an audience."
+      },
+      {
+        "title": "Owner-only inbox",
+        "body": "Only you can read what is sent to you. Nothing is public by default."
+      },
+      {
+        "title": "Open source",
+        "body": "Self-hostable and MIT licensed, built on a clean Next.js plus Postgres stack."
+      }
+    ],
+    "privacy": {
+      "eyebrow": "Privacy & security",
+      "title": "What's sent here stays here — protected",
+      "subtitle": "Concerned about privacy? Fair. Here's exactly how the box keeps your messages safe, and why no one else can ever read them.",
+      "points": [
+        {
+          "title": "No sender identity, ever",
+          "body": "Leaving a message needs no account, no name, no email — and nothing about who sent it is stored. There is simply no sender record to expose."
+        },
+        {
+          "title": "Only you can open your box",
+          "body": "Every read request is checked against the logged-in owner's own session at the data layer. There is no admin panel and no public listing — the only key to your inbox is your own login."
+        },
+        {
+          "title": "Your call — delete anytime",
+          "body": "Read, mark unread, or permanently delete any message from your dashboard. Deleted messages are removed from the system immediately — no archive, no hidden copies."
+        },
+        {
+          "title": "No tracking. No data selling. Open code.",
+          "body": "The app uses no tracking cookies, ads, or analytics — and the entire source code is public, so anyone can audit how it treats your data."
+        }
+      ]
+    },
+    "ctaTitle": "Ready to hear the truth?",
+    "ctaBody": "Create your box in under a minute. No credit card, no catch.",
+    "ctaOpen": "Open dashboard",
+    "ctaStart": "Get started free"
+  },
+  "auth": {
+    "signupTitle": "Create your FeedbackBox",
+    "loginTitle": "Welcome back",
+    "signupSubtitle": "It takes less than a minute.",
+    "loginSubtitle": "Log in to read your messages.",
+    "fullName": "Full name",
+    "fullNamePlaceholder": "Forhad Hossin",
+    "email": "Email",
+    "emailPlaceholder": "you@example.com",
+    "username": "Username",
+    "usernameHint": "Optional, we'll generate one",
+    "usernamePlaceholder": "forhad",
+    "password": "Password",
+    "passwordSignupPlaceholder": "At least 6 characters",
+    "passwordLoginPlaceholder": "••••••••",
+    "somethingWentWrong": "Something went wrong.",
+    "networkError": "Network error. Please try again.",
+    "pleaseWait": "Please wait",
+    "createAccount": "Create account",
+    "logIn": "Log in",
+    "or": "or",
+    "continueWithGoogle": "Continue with Google",
+    "alreadyHaveAccount": "Already have an account?",
+    "logInLink": "Log in",
+    "newHere": "New to FeedbackBox?",
+    "createOne": "Create one"
+  },
+  "dashboard": {
+    "greeting": "Hi, {name}",
+    "yourDashboard": "Your dashboard",
+    "messageCount": "{count} message",
+    "messageCountPlural": "{count} messages",
+    "unreadCount": "{count} unread",
+    "logOut": "Log out",
+    "loggingOut": "Logging out",
+    "yourShareLink": "Your share link",
+    "copyLink": "Copy link",
+    "copied": "Copied",
+    "shareLinkHint": "Anyone with this link can message you anonymously, no login needed.",
+    "inbox": "Inbox",
+    "markAllRead": "Mark all as read",
+    "noMessagesTitle": "No messages yet",
+    "noMessagesBody": "Share your link above to start collecting anonymous feedback.",
+    "unreadLabel": "Unread",
+    "searchPlaceholder": "Search messages…",
+    "filterAll": "All",
+    "filterUnread": "Unread",
+    "filterRead": "Read",
+    "sortNewest": "Newest first",
+    "sortOldest": "Oldest first",
+    "sortBy": "Sort",
+    "selectAll": "Select all",
+    "clearSelection": "Clear",
+    "selectedCount": "{count} selected",
+    "markSelectedRead": "Mark read",
+    "markSelectedUnread": "Mark unread",
+    "deleteSelected": "Delete",
+    "deleteMessage": "Delete message",
+    "confirmDelete": "Confirm delete?",
+    "cancel": "Cancel",
+    "markRead": "Mark as read",
+    "markUnread": "Mark as unread",
+    "loadMore": "Load more",
+    "showingCount": "Showing {shown} of {total}",
+    "noResultsTitle": "No matching messages",
+    "noResultsBody": "Try a different search or filter.",
+    "deleting": "Deleting…",
+    "updating": "Updating…"
+  },
+  "messageForm": {
+    "sentTitle": "Message sent",
+    "sentBody": "Your anonymous message was delivered. {name} will never know who sent it.",
+    "sendAnother": "Send another",
+    "title": "Send an anonymous message to {name}",
+    "subtitle": "Be kind, be honest. Your identity stays private.",
+    "placeholder": "Write something nice, or constructive…",
+    "couldNotSend": "Could not send your message.",
+    "networkError": "Network error. Please try again.",
+    "sending": "Sending",
+    "sendAnonymously": "Send anonymously",
+    "hostedBy": "Hosted by FeedbackBox · no account required to send"
+  },
+  "profile": {
+    "notFoundTitle": "FeedbackBox not found",
+    "notFoundBody": "We couldn't find a box for {username}. The link may be wrong or the owner may have deleted their account.",
+    "wantOwnBox": "Want your own box?",
+    "createFree": "Create one free on {name}",
+    "ownInboxLink": "This is your own box — open it in your dashboard"
+  },
+  "api": {
+    "nameRequired": "Please enter your name (at least 2 characters).",
+    "invalidEmail": "Please enter a valid email address.",
+    "passwordTooShort": "Password must be at least 6 characters.",
+    "emailExists": "An account with this email already exists.",
+    "signupFailed": "Something went wrong creating your account.",
+    "credentialsInvalid": "Invalid email or password.",
+    "loginFailed": "Something went wrong signing in.",
+    "recipientRequired": "Recipient not found.",
+    "messageLength": "Message must be between {min} and {max} characters.",
+    "linkInvalid": "This FeedbackBox link is invalid or no longer exists.",
+    "sendFailed": "Could not send your message. Please try again.",
+    "unauthorized": "Unauthorized",
+    "updateFailed": "Could not update messages.",
+    "deleteFailed": "Could not delete messages."
+  }
+}
