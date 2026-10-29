@@ -3,12 +3,12 @@ export const SITE = {
   tagline: "Get honest, anonymous feedback from anyone.",
   description:
     "FeedbackBox is an open-source, anonymous feedback tool. Share your link, receive candid messages — no sign-up required for senders.",
-  repoUrl: "https://github.com/forhadhossin/feedback-box",
+  repoUrl: "https://github.com/Forhad96/feedbackbox-app",
   author: {
     name: "Forhad Hossin",
-    github: "https://github.com/forhadhossin",
-    facebook: "https://facebook.com/forhadhossin", // placeholder
-    linkedin: "https://linkedin.com/in/forhadhossin", // placeholder
+    github: "https://github.com/Forhad96",
+    facebook: "https://www.facebook.com/forhad.tech",
+    linkedin: "https://www.linkedin.com/in/forhadev/",
   },
 };
 
