@@ -3,6 +3,7 @@ import type { ReactNode } from "react";
 import "./globals.css";
 import SiteNav from "@/components/site-nav";
 import SiteFooter from "@/components/site-footer";
+import ToasterProvider from "@/components/toaster";
 import { SITE } from "@/lib/config";
 import { getServerLang } from "@/lib/i18n/server";
 
@@ -25,7 +26,9 @@ export default async function RootLayout({
     <html lang={lang} dir="ltr">
       <body className="flex min-h-screen flex-col bg-slate-50 text-slate-900 antialiased">
         <SiteNav lang={lang} />
-        <div className="flex-1">{children}</div>
+        <ToasterProvider>
+          <div className="flex-1">{children}</div>
+        </ToasterProvider>
         <SiteFooter lang={lang} />
       </body>
     </html>

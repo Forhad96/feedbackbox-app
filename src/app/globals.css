@@ -91,4 +91,19 @@
   .spinner {
     @apply h-4 w-4 animate-spin rounded-full border-2 border-current border-t-transparent;
   }
+
+  @keyframes toast-in {
+    from {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .toast-enter {
+    animation: toast-in 180ms ease-out;
+  }
 }

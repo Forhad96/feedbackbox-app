@@ -3,8 +3,10 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+import { Eye, EyeOff } from "lucide-react";
 import type { Dict } from "@/lib/i18n";
 import { Container } from "@/design-system";
+import { useToast } from "@/components/toaster";
 
 export default function AuthForm({
   mode,
@@ -16,12 +18,14 @@ export default function AuthForm({
   dict: Dict["auth"];
 }) {
   const router = useRouter();
+  const { toast } = useToast();
   const isSignup = mode === "signup";
 
   const [fullName, setFullName] = useState("");
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
 
@@ -44,14 +48,21 @@ export default function AuthForm({
       });
       const data = await res.json();
       if (!res.ok) {
-        setError(data.error ?? dict.somethingWentWrong);
+        const message = data.error ?? dict.somethingWentWrong;
+        setError(message);
+        toast(message, "error");
         setLoading(false);
         return;
       }
+      toast(
+        isSignup ? dict.accountCreated : dict.welcomeBack,
+        "success"
+      );
       router.push("/dashboard");
       router.refresh();
     } catch {
       setError(dict.networkError);
+      toast(dict.networkError, "error");
       setLoading(false);
     }
   }
@@ -107,19 +118,36 @@ export default function AuthForm({
           )}
 
           <Field label={dict.password}>
-            <input
-              required
-              type="password"
-              autoComplete={isSignup ? "new-password" : "current-password"}
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              placeholder={
-                isSignup
-                  ? dict.passwordSignupPlaceholder
-                  : dict.passwordLoginPlaceholder
-              }
-              className="input"
-            />
+            <div className="relative">
+              <input
+                required
+                type={showPassword ? "text" : "password"}
+                autoComplete={isSignup ? "new-password" : "current-password"}
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                placeholder={
+                  isSignup
+                    ? dict.passwordSignupPlaceholder
+                    : dict.passwordLoginPlaceholder
+                }
+                className="input pr-11"
+              />
+              <button
+                type="button"
+                onClick={() => setShowPassword((v) => !v)}
+                aria-label={
+                  showPassword ? dict.hidePassword : dict.showPassword
+                }
+                title={showPassword ? dict.hidePassword : dict.showPassword}
+                className="absolute right-3 top-1/2 -translate-y-1/2 text-neutral-400 transition-colors hover:text-neutral-700"
+              >
+                {showPassword ? (
+                  <EyeOff className="h-4 w-4" />
+                ) : (
+                  <Eye className="h-4 w-4" />
+                )}
+              </button>
+            </div>
           </Field>
 
           {error && (
