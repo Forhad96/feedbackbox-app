@@ -12,6 +12,10 @@
   --color-danger: #dc2626;
   --radius-card: 1rem;
   --radius-control: 0.625rem;
+
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+    "Noto Sans", var(--font-bengali), "Nirmala UI", "Vrinda", "Bangla MN",
+    sans-serif;
 }
 
 @layer base {
